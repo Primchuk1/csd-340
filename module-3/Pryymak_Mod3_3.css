@@ -1,0 +1,60 @@
+#container {
+    width: 100%;
+}
+
+h1 {
+    text-align:center;
+}
+
+#left-list {
+    /*display: inline-block;*/
+    width: 45%;
+    border: 1px solid red;
+    border-radius: 15px;
+    float:left;
+    padding: 10px;
+}
+
+ol {
+    padding: 10px;
+    list-style-position: inside;
+}
+
+#right-list {
+    /*display: inline-block;*/
+    width: 45%;
+    border: 1px dashed red;
+    border-radius: 15px;
+    float:right;
+    padding: 10px;
+}
+
+ul {
+    padding: 10px;
+    list-style: upper-roman;
+    list-style-position: inside;
+}
+
+#link-to-landing {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 60%;
+    float: right;
+    text-align: right;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+ol, ul {
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
