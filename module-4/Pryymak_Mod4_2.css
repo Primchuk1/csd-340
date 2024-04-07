@@ -1,0 +1,45 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #aebbc7;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(233, 216, 216, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #image-gallery {
+    margin-top: 10%;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  figure {
+    text-align: center;
+  }
+
+  figcaption {
+    font-style: italic;
+    font-size: .75em;
+  }
+
+  #link-to-landing {
+    position: relative;
+    top: 20px;
+    text-align: right;
+
+  }
+
+  img {
+    width: 50%;
+  }
