@@ -1,0 +1,53 @@
+<!--
+    Name: Ivan Pryymak
+    Date: 4/27/2024
+    Assignment 9.3
+-->
+<!DOCTYPE html>
+<head>
+    <meta name="description" content="Bellevue University HTML and CSS class assignment"/>
+    <meta name="keywords" content="Bellevue, HTML, CSS, assignment" />
+    <meta name="robots" content="nofollow" />
+    <meta http-equiv="author" content="Ivan Pryymak" />
+    <link href="Pryymak_Mod2_2.css" rel="stylesheet" type="text/css" />
+    <title>CSD 340 Development with HTML and CSS</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        <h2>Information about me</h2>
+        <p class="intro">My name is Ivan Pryymak. I am 28. Next year I'll be <span id="first">____</span>.</p>
+        <p>I was born in Ukraine. I became an American citizen last year. I live in <span id="second">____</span>.</p>
+        <p>I am married. I don't have kids. <span class="sentence">I have 3 <span id="third">____</span>.</p>
+        <p>I study software development. I play <span id="forth">____</span>. I go to the gym.</p>
+        <hr />
+        <p>
+            <button type="button"
+              onclick="document.getElementById('first').innerHTML = first">29</button> <br />   
+        </p> 
+        <p>
+            <button type="button"
+              onclick="document.getElementById('second').innerHTML = second">Minnesota</button> <br />   
+        </p> 
+        <p>
+            <button type="button"
+              onclick="document.getElementById('third').innerHTML = third">cats</button> <br />   
+        </p> 
+        <p>
+            <button type="button"
+              onclick="document.getElementById('forth').innerHTML = forth">video games</button> <br />   
+        </p> 
+        <hr />
+        <address>
+            <p><a href="https://www.bellevue.edu/">Bellevue University</a></p>
+            <p>1000 Galvin Road South</p>
+            <p>Bellevue, Nebraska, 68005</p>
+        </address>
+    </div>
+    <script>
+        var first = 29;
+        var second = "Minnesota";
+        var third = "cats";
+        var forth = "video games";
+    </script>
+</body>
