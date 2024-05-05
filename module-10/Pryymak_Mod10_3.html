@@ -1,0 +1,49 @@
+<!--
+    Name: Ivan Pryymak
+    Date: 5/05/2024
+    Assignment 10.3
+-->
+<!DOCTYPE html>
+
+<head>
+    <meta name="description" content="Bellevue University HTML and CSS class assignment" />
+    <meta name="keywords" content="Bellevue, HTML, CSS, assignment" />
+    <meta name="robots" content="nofollow" />
+    <meta http-equiv="author" content="Ivan Pryymak" />
+    <title>CSD 340 Development with HTML and CSS</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 10.3: JavaScript - Part 2</h1>
+        <div>
+            <p>
+                <img src="cave_01.jpg" alt="Image of a cave" onclick="changeImage(this)">
+            </p>
+            <p>
+                <img src="moon_01.jpg" alt="Image of a Moon" onclick="changeImage(this)">
+            </p>
+        </div>
+    </div>
+    <script>
+        function changeImage(x) {
+            let filename = x.src.match(/.*\/(.*)$/)[1];
+            switch(filename){
+                case "cave_01.jpg":
+                    x.src = "cave_02.jpg";
+                    break;
+                case "cave_02.jpg":
+                    x.src = "cave_01.jpg";
+                    break;
+                case "moon_01.jpg":
+                    x.src = "moon_02.jpg";
+                    break;
+                case "moon_02.jpg":
+                    x.src = "moon_01.jpg";
+                    break;
+            }
+        }
+    </script>
+    
+    
+</body>
