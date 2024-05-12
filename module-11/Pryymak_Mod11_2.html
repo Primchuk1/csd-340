@@ -1,0 +1,109 @@
+<!--
+    Name: Ivan Pryymak
+    Date: 5/12/2024
+    Assignment 11.2
+-->
+<!DOCTYPE html>
+
+<head>
+    <meta name="description" content="Bellevue University HTML and CSS class assignment" />
+    <meta name="keywords" content="Bellevue, HTML, CSS, assignment" />
+    <meta name="robots" content="nofollow" />
+    <meta http-equiv="author" content="Ivan Pryymak" />
+    <title>CSD 340 Development with HTML and CSS</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+        <p>This is an interactive To Do List. Type in your first item in the text field, then click Add.
+            Click the Display button to see current items in the list.
+            Click on Delete Last Entry if you'd like to remove the last entry.
+        </p>
+        <label for="input">Enter some text to add to an array</label>
+        <input type="text" id="input" name="input"> <span id="confirmation"></span>
+
+
+
+        <hr>
+
+        <div>
+            <button type="button" onclick="add()">Add</button>
+            <button type="button" onclick="deleteElem()">Delete Last Entry</button>
+            <button type="button" onclick="deleteElemByIndex()">Delete Specific Entry</button>
+            <button type="button" onclick="display()">Display</button>
+        </div>
+
+        <hr>
+        <div>The array data:</div>
+        <p id="result_array"></p>
+
+    </div>
+    <script>
+        const array = [];
+
+        function add() {
+            let elem = document.getElementById("input").value;
+            if (elem != "") {
+                array.push(elem);
+                document.getElementById("input").value = "";
+                document.getElementById("confirmation").innerHTML = "Added successfully!";
+            } else {
+                document.getElementById("confirmation").innerHTML = "Enter some text before adding!";
+
+            }
+        }
+
+        function deleteElem() {
+            if (array.length > 0) {
+                array.pop();
+
+                document.getElementById("confirmation").innerHTML = "Deleted successfully!";
+
+            } else {
+
+                document.getElementById("confirmation").innerHTML = "Array is empty, nothing to delete.";
+            }
+        }
+
+        function deleteElemByIndex() {
+            if (array.length > 0) {
+                while (true) {
+
+                    let index = parseInt(prompt("Please enter the number in the To Do List to delete: "));
+
+                    if (array[index - 1]) {
+                        array.splice(index - 1, 1);
+                        document.getElementById("confirmation").innerHTML = "Deleted successfully!";
+                    } else {
+                        alert("Sorry, no such number in the list");
+                    }
+                    break;
+
+                }
+
+
+            } else {
+
+                document.getElementById("confirmation").innerHTML = "Array is empty, nothing to delete.";
+            }
+        }
+
+        function display() {
+            document.getElementById("confirmation").innerHTML = "";
+            let display_result = document.getElementById("result_array");
+            let result = "<ol>";
+            if (array.length) {
+                for (el of array) {
+                    result += "<li>" + el + "</li>";
+                }
+                result += "</ol>";
+                display_result.innerHTML = result;
+            } else {
+                result = "<p>Array is empty, nothing to display.</p>"
+                display_result.innerHTML = result;
+            }
+        }
+    </script>
+</body>
