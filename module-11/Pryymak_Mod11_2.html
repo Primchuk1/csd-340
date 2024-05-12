@@ -49,6 +49,7 @@
                 array.push(elem);
                 document.getElementById("input").value = "";
                 document.getElementById("confirmation").innerHTML = "Added successfully!";
+                alert("Item '" + elem + "' was added at index " + array.length + ".")
             } else {
                 document.getElementById("confirmation").innerHTML = "Enter some text before adding!";
 
